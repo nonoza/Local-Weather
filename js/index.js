@@ -24,10 +24,10 @@ $(document).ready(function(){
     $("#currentTemp").prepend('<img src=' + apiIcon + '>' );
   }
   //Call the location   
-  $.getJSON('https://freegeoip.net/json/').done(function(location) {
-    $("#city").html(location.city);
-    $("#province").html(location.region_name);
-    $("#country").html(location.country_name);
+  $.getJSON('http://api.openweathermap.org/geo/1.0/direct?q=London&limit=5&appid=e36712d61477ff8be0a3a47834b620c8').done(function(location) {
+    $("#city").html(location.name);
+    //$("#province").html(location.region_name);
+    //$("#country").html(location.country_name);
    
     
   // console.log(location);
